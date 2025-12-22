@@ -58,10 +58,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
       }
     } on FirebaseAuthException catch (e) {
-      String msg = e.message ?? "Update failed";
+      String msg = e.message ?? 'Update failed';
       // Jika user sudah lama tidak login, Firebase butuh re-authentication
       if (e.code == 'requires-recent-login') {
-        msg = "Please logout and login again to change password.";
+        msg = 'Please logout and login again to change password.';
       }
       
       // ignore: use_build_context_synchronously
@@ -131,7 +131,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
 
                 // TITLE
                 Text(
-                  "Change Password",
+                  'Change Password',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -140,7 +140,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "Create a new, strong password for your account security.",
+                  'Create a new, strong password for your account security.',
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.green[800],
@@ -176,7 +176,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           onToggle: () =>
                               setState(() => _isOldVisible = !_isOldVisible),
                           validator: (v) =>
-                              v!.isEmpty ? "Old password is required" : null,
+                              v!.isEmpty ? 'Old password is required' : null,
                         ),
 
                         const SizedBox(height: 20),
@@ -189,7 +189,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           onToggle: () =>
                               setState(() => _isNewVisible = !_isNewVisible),
                           validator: (v) =>
-                              v!.length < 6 ? "Min. 6 characters" : null,
+                              v!.length < 6 ? 'Min. 6 characters' : null,
                         ),
 
                         const SizedBox(height: 20),
@@ -204,7 +204,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           ),
                           validator: (v) {
                             if (v != _newPassController.text) {
-                              return "Passwords do not match";
+                              return 'Passwords do not match';
                             }
                             return null;
                           },
@@ -229,7 +229,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                             child: _isLoading 
                               ? const CircularProgressIndicator(color: Colors.white)
                               : const Text(
-                                  "Update Password",
+                                  'Update Password',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,

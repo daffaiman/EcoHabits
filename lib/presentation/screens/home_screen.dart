@@ -169,7 +169,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Ambil data dari AuthManager (untuk nama user)
     final auth = Provider.of<AuthManager>(context);
-    final String userName = auth.user?.displayName?.split(' ').first ?? "Eco-User";
+    final String userName = auth.user?.displayName?.split(' ').first ?? 'Eco-User';
     final String todayDate = 
       "${DateTime.now().weekday == 6 ? 'Saturday' : 'Weekday'}, ${DateTime.now().day} ${DateTime.now().month}"; 
     
@@ -203,7 +203,7 @@ class DashboardPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Good Morning, $userName! ☀️", 
+                              'Good Morning, $userName! ☀️', 
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -264,7 +264,7 @@ class DashboardPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                "Daily Goals",
+                                'Daily Goals',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -281,7 +281,7 @@ class DashboardPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: const Text(
-                                  "Level 4 🌱",
+                                  'Level 4 🌱',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 12,
@@ -296,14 +296,14 @@ class DashboardPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "$completedHabits of $totalHabits completed", 
+                                '$completedHabits of $totalHabits completed', 
                                 style: const TextStyle(
                                   color: Colors.white70,
                                   fontSize: 13,
                                 ),
                               ),
                               Text(
-                                "${(progressValue * 100).toInt()}%", 
+                                '${(progressValue * 100).toInt()}%', 
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -341,7 +341,7 @@ class DashboardPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Your Habits",
+                          'Your Habits',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -350,7 +350,7 @@ class DashboardPage extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: onSeeAllTap,
-                          child: const Text("See All"),
+                          child: const Text('See All'),
                         ),
                       ],
                     ),
@@ -361,7 +361,7 @@ class DashboardPage extends StatelessWidget {
 
                     if (totalHabits == 0)
                       Center(
-                        child: Text("Start adding your first habit! 🌱", style: TextStyle(color: Colors.grey[500])),
+                        child: Text('Start adding your first habit! 🌱', style: TextStyle(color: Colors.grey[500])),
                       )
                     else
                       // [PERBAIKAN 2]: Menghapus .toList() karena spread operator (...) 

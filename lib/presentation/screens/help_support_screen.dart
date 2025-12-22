@@ -8,7 +8,7 @@ class HelpSupportScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFE6F4E7), // Background hijau pastel
       appBar: AppBar(
-        title: const Text("Help & Support"),
+        title: const Text('Help & Support'),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -21,7 +21,7 @@ class HelpSupportScreen extends StatelessWidget {
           children: [
             // --- BAGIAN 1: CONTACT SUPPORT ---
             const Text(
-              "Contact Us",
+              'Contact Us',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
@@ -39,9 +39,9 @@ class HelpSupportScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Row(
+              child: const Row(
                 children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 24,
                     child: Icon(
@@ -50,12 +50,12 @@ class HelpSupportScreen extends StatelessWidget {
                       size: 28,
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: 16),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
-                        "Customer Service",
+                        'Customer Service',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class HelpSupportScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        "support@ecohabits.com",
+                        'support@ecohabits.com',
                         style: TextStyle(color: Colors.white70, fontSize: 14),
                       ),
                     ],
@@ -77,25 +77,25 @@ class HelpSupportScreen extends StatelessWidget {
 
             // --- BAGIAN 2: FAQ ---
             const Text(
-              "Frequently Asked Questions",
+              'Frequently Asked Questions',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
 
             _buildFaqTile(
-              "How do I create a new habit?",
+              'How do I create a new habit?',
               "Go to the Home screen and tap the '+' button in the bottom navigation bar. Fill in the details and save.",
             ),
             _buildFaqTile(
-              "Can I delete a habit?",
-              "Yes, simply tap on the habit you want to remove and look for the delete icon or swipe left on the list.",
+              'Can I delete a habit?',
+              'Yes, simply tap on the habit you want to remove and look for the delete icon or swipe left on the list.',
             ),
             _buildFaqTile(
-              "Is my data secure?",
-              "Absolutely. We use industry-standard encryption to protect your personal information and habit data.",
+              'Is my data secure?',
+              'Absolutely. We use industry-standard encryption to protect your personal information and habit data.',
             ),
             _buildFaqTile(
-              "How do I reset my password?",
+              'How do I reset my password?',
               "Go to the Login screen and tap 'Forgot Password'. Follow the instructions sent to your email.",
             ),
           ],

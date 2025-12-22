@@ -10,8 +10,8 @@ class HabitsScreen extends StatefulWidget {
 }
 
 class _HabitsScreenState extends State<HabitsScreen> {
-  final List<String> _filters = ["All", "Morning", "Afternoon", "Night"];
-  String _selectedFilter = "All";
+  final List<String> _filters = ['All', 'Morning', 'Afternoon', 'Night'];
+  String _selectedFilter = 'All';
 
   @override
   void initState() {
@@ -27,7 +27,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F9F6),
       appBar: AppBar(
-        title: const Text("My Habits", style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('My Habits', style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -43,7 +43,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
               children: [
                 TextField(
                   decoration: InputDecoration(
-                    hintText: "Search habits...",
+                    hintText: 'Search habits...',
                     hintStyle: TextStyle(color: Colors.grey[400]),
                     prefixIcon: Icon(Icons.search, color: Colors.green[600]),
                     filled: true,
@@ -96,12 +96,12 @@ class _HabitsScreenState extends State<HabitsScreen> {
                 var habits = habitManager.habits;
 
                 // Simple Filter Logic (Berdasarkan Waktu)
-                if (_selectedFilter != "All") {
+                if (_selectedFilter != 'All') {
                   habits = habits.where((h) {
-                    int hour = int.parse(h.reminderTime.split(":")[0]);
-                    if (_selectedFilter == "Morning") return hour < 12;
-                    if (_selectedFilter == "Afternoon") return hour >= 12 && hour < 18;
-                    if (_selectedFilter == "Night") return hour >= 18;
+                    int hour = int.parse(h.reminderTime.split(':')[0]);
+                    if (_selectedFilter == 'Morning') return hour < 12;
+                    if (_selectedFilter == 'Afternoon') return hour >= 12 && hour < 18;
+                    if (_selectedFilter == 'Night') return hour >= 18;
                     return true;
                   }).toList();
                 }
@@ -113,7 +113,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
                       children: [
                         Icon(Icons.eco_outlined, size: 60, color: Colors.grey[300]),
                         const SizedBox(height: 10),
-                        Text("No habits found. Add one! 🌱", style: TextStyle(color: Colors.grey[500])),
+                        Text('No habits found. Add one! 🌱', style: TextStyle(color: Colors.grey[500])),
                       ],
                     ),
                   );
@@ -244,7 +244,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
             onSelected: (value) {
               if (value == 'delete') {
                 Provider.of<HabitManager>(context, listen: false).deleteHabit(id);
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Habit deleted")));
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Habit deleted')));
               }
             },
             itemBuilder: (context) => [
@@ -254,7 +254,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
                   children: [
                     Icon(Icons.delete_outline, size: 20, color: Colors.red),
                     SizedBox(width: 10),
-                    Text("Delete", style: TextStyle(color: Colors.red)),
+                    Text('Delete', style: TextStyle(color: Colors.red)),
                   ],
                 ),
               ),

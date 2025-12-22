@@ -39,9 +39,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         context: context,
         barrierDismissible: false,
         builder: (context) => AlertDialog(
-          title: const Text("Check your Mail"),
+          title: const Text('Check your Mail'),
           content: Text(
-            "We have sent password recovery instructions to ${_emailController.text}.",
+            'We have sent password recovery instructions to ${_emailController.text}.',
           ),
           actions: [
             TextButton(
@@ -49,7 +49,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 Navigator.pop(context); // Tutup dialog
                 Navigator.pop(context); // Kembali ke Login
               },
-              child: const Text("OK"),
+              child: const Text('OK'),
             ),
           ],
         ),
@@ -58,7 +58,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Failed: ${auth.errorMessage ?? e.toString()}"),
+          content: Text('Failed: ${auth.errorMessage ?? e.toString()}'),
           backgroundColor: Colors.red,
         ),
       );
@@ -142,7 +142,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
                 const Center(
                   child: Text(
-                    "Forgot Password?",
+                    'Forgot Password?',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -185,7 +185,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Email Address",
+                          'Email Address',
                           style: TextStyle(
                             color: Color(0xFF1B5E20),
                             fontWeight: FontWeight.w600,
@@ -197,8 +197,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           controller: _emailController,
                           keyboardType: TextInputType.emailAddress,
                           validator: (v) {
-                            if (v!.isEmpty) return "Email is required";
-                            if (!v.contains("@")) return "Invalid email format";
+                            if (v!.isEmpty) return 'Email is required';
+                            if (!v.contains('@')) return 'Invalid email format';
                             return null;
                           },
                           style: const TextStyle(color: Color(0xFF1B5E20)),
@@ -258,7 +258,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                                   child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2)
                                 )
                               : const Text(
-                                  "Send Reset Link",
+                                  'Send Reset Link',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,

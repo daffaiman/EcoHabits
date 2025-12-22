@@ -80,7 +80,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Registration Failed: ${e.toString()}"),
+          content: Text('Registration Failed: ${e.toString()}'),
           backgroundColor: Colors.red,
         ),
       );
@@ -163,7 +163,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                     const SizedBox(height: 20),
 
                     Text(
-                      "Create Account",
+                      'Create Account',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 28,
@@ -174,7 +174,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "Join us to save the planet!",
+                      'Join us to save the planet!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16, 
@@ -210,7 +210,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                               label: 'Username',
                               icon: Icons.person_outline_rounded,
                               validator: (v) =>
-                                  v!.isEmpty ? "Username required" : null,
+                                  v!.isEmpty ? 'Username required' : null,
                             ),
 
                             const SizedBox(height: 20),
@@ -221,8 +221,8 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                               label: 'Email',
                               icon: Icons.email_outlined,
                               validator: (v) {
-                                if (v!.isEmpty) return "Email required";
-                                if (!v.contains("@")) return "Invalid email format";
+                                if (v!.isEmpty) return 'Email required';
+                                if (!v.contains('@')) return 'Invalid email format';
                                 return null;
                               },
                             ),
@@ -242,7 +242,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                 );
                               },
                               validator: (v) =>
-                                  v!.length < 6 ? "Min. 6 characters" : null,
+                                  v!.length < 6 ? 'Min. 6 characters' : null,
                             ),
 
                             const SizedBox(height: 20),
@@ -261,7 +261,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                               },
                               validator: (v) {
                                 if (v != _passwordController.text) {
-                                  return "Passwords do not match";
+                                  return 'Passwords do not match';
                                 }
                                 return null;
                               },
@@ -300,7 +300,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                                       child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2)
                                     )
                                   : const Text(
-                                      "Sign Up",
+                                      'Sign Up',
                                       style: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
@@ -321,13 +321,13 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account? ",
+                          'Already have an account? ',
                           style: TextStyle(color: Colors.green[900], fontSize: 15),
                         ),
                         GestureDetector(
                           onTap: () => Navigator.pop(context),
                           child: const Text(
-                            "Log In",
+                            'Log In',
                             style: TextStyle(
                               color: Color(0xFF00A040),
                               fontWeight: FontWeight.bold,

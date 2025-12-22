@@ -33,7 +33,7 @@ class HabitManager extends ChangeNotifier {
       _isLoading = false;
       notifyListeners();
     }, onError: (e) {
-      debugPrint("Error listening to habits: $e");
+      debugPrint('Error listening to habits: $e');
       _isLoading = false;
       notifyListeners();
     });

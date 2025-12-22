@@ -23,7 +23,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # Perbaikan: flutter_lints hanya ditulis satu kali di sini
   flutter_lints: ^6.0.0
+  integration_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
@@ -33,4 +36,3 @@ flutter:
     - assets/fb.png
     - assets/google.png
     - assets/ig.png
-

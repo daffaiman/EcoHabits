@@ -157,8 +157,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 36),
-                      child: Row(
-                        children: const [
+                      child: const Row(
+                        children: [
                           Expanded(
                             child: Divider(color: Colors.black26, thickness: 1),
                           ),

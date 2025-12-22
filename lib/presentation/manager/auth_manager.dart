@@ -36,7 +36,7 @@ class AuthManager extends ChangeNotifier {
       if (user != null) {
         _currentUser = UserEntity(
           uid: user.uid,
-          email: user.email ?? "",
+          email: user.email ?? '',
           displayName: user.displayName,
         );
       } else {
@@ -78,7 +78,7 @@ class AuthManager extends ChangeNotifier {
     } on FirebaseAuthException catch (e) {
       throw _handleError(e);
     } catch (e) {
-      throw "Terjadi kesalahan yang tidak diketahui.";
+      throw 'Terjadi kesalahan yang tidak diketahui.';
     } finally {
       _setLoading(false);
     }
@@ -110,7 +110,7 @@ class AuthManager extends ChangeNotifier {
     } on FirebaseAuthException catch (e) {
       _errorMessage = _handleError(e);
     } catch (e) {
-      _errorMessage = "Google Sign In Gagal: ${e.toString()}";
+      _errorMessage = 'Google Sign In Gagal: ${e.toString()}';
       debugPrint(e.toString());
     } finally {
       _setLoading(false);
@@ -128,7 +128,7 @@ class AuthManager extends ChangeNotifier {
     try {
       await GoogleSignIn().signOut();
     } catch (e) {
-      debugPrint("Error signing out Google: $e");
+      debugPrint('Error signing out Google: $e');
     }
 
     _currentUser = null;
@@ -159,28 +159,28 @@ class AuthManager extends ChangeNotifier {
     if (e is FirebaseAuthException) {
       switch (e.code) {
         case 'invalid-email':
-          return "Email tidak valid.";
+          return 'Email tidak valid.';
         case 'user-not-found':
-          return "Akun tidak ditemukan.";
+          return 'Akun tidak ditemukan.';
         case 'wrong-password':
-          return "Password salah.";
+          return 'Password salah.';
         case 'email-already-in-use':
-          return "Email sudah terdaftar.";
+          return 'Email sudah terdaftar.';
         case 'weak-password':
-          return "Password terlalu lemah.";
+          return 'Password terlalu lemah.';
         case 'network-request-failed':
-          return "Periksa koneksi internet.";
+          return 'Periksa koneksi internet.';
         case 'account-exists-with-different-credential':
-          return "Email sudah digunakan (Coba Login Google).";
+          return 'Email sudah digunakan (Coba Login Google).';
         case 'invalid-credential':
-          return "Kredensial tidak valid.";
+          return 'Kredensial tidak valid.';
         case 'popup-closed-by-user':
-          return "Login dibatalkan.";
+          return 'Login dibatalkan.';
         default:
-          return e.message ?? "Terjadi kesalahan.";
+          return e.message ?? 'Terjadi kesalahan.';
       }
     }
-    return e.toString().replaceAll("Exception: ", "");
+    return e.toString().replaceAll('Exception: ', '');
   }
 
   void clearError() {

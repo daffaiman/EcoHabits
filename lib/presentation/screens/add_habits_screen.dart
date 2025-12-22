@@ -13,14 +13,14 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
   final _titleController = TextEditingController();
   final _descController = TextEditingController();
 
-  String _selectedCategory = "General";
-  String _selectedFrequency = "Daily";
+  String _selectedCategory = 'General';
+  String _selectedFrequency = 'Daily';
   TimeOfDay _selectedTime = const TimeOfDay(hour: 8, minute: 0);
 
   final List<String> _categories = [
-    "General", "Water", "Energy", "Recycle", "Exercise", "Reading"
+    'General', 'Water', 'Energy', 'Recycle', 'Exercise', 'Reading'
   ];
-  final List<String> _frequencies = ["Daily", "Weekly", "Weekdays"];
+  final List<String> _frequencies = ['Daily', 'Weekly', 'Weekdays'];
 
   bool _isSaving = false; // Loading state lokal untuk tombol
 
@@ -58,7 +58,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F9F6),
       appBar: AppBar(
-        title: const Text("New Habit", style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('New Habit', style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -70,24 +70,24 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSectionTitle("Habit Name"),
+            _buildSectionTitle('Habit Name'),
             _buildTextField(
               controller: _titleController,
-              hint: "e.g. Drink Water",
+              hint: 'e.g. Drink Water',
               icon: Icons.edit_outlined,
             ),
             const SizedBox(height: 20),
 
-            _buildSectionTitle("Description"),
+            _buildSectionTitle('Description'),
             _buildTextField(
               controller: _descController,
-              hint: "e.g. Drink 2L water daily...",
+              hint: 'e.g. Drink 2L water daily...',
               icon: Icons.description_outlined,
               maxLines: 3,
             ),
             const SizedBox(height: 20),
 
-            _buildSectionTitle("Category"),
+            _buildSectionTitle('Category'),
             Wrap(
               spacing: 10,
               children: _categories.map((category) {
@@ -119,7 +119,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _buildSectionTitle("Frequency"),
+                      _buildSectionTitle('Frequency'),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                         decoration: BoxDecoration(
@@ -147,7 +147,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _buildSectionTitle("Reminder"),
+                      _buildSectionTitle('Reminder'),
                       GestureDetector(
                         onTap: _pickTime,
                         child: Container(
@@ -185,7 +185,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                   : () async {
                     if (_titleController.text.isEmpty) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("Please enter a habit name")),
+                        const SnackBar(content: Text('Please enter a habit name')),
                       );
                       return;
                     }
@@ -215,7 +215,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                       _titleController.clear();
                       _descController.clear();
                       setState(() {
-                         _selectedCategory = "General";
+                         _selectedCategory = 'General';
                          _selectedTime = const TimeOfDay(hour: 8, minute: 0);
                       });
 
@@ -237,7 +237,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                 child: _isSaving 
                   ? const CircularProgressIndicator(color: Colors.white)
                   : const Text(
-                      "Create Habit",
+                      'Create Habit',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

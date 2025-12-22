@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                     const SizedBox(height: 20),
 
                     const Text(
-                      "Welcome Back!",
+                      'Welcome Back!',
                       textAlign: TextAlign.center, // Rata Tengah
                       style: TextStyle(
                         fontSize: 28,
@@ -145,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                     const SizedBox(height: 8),
                     
                     Text(
-                      "Sign in to continue your eco-journey",
+                      'Sign in to continue your eco-journey',
                       textAlign: TextAlign.center, // Rata Tengah
                       style: TextStyle(
                         fontSize: 16,
@@ -178,11 +178,11 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             // EMAIL FIELD
                             _buildTextField(
                               controller: _emailController,
-                              label: "Email Address",
+                              label: 'Email Address',
                               icon: Icons.email_outlined,
                               validator: (value) {
-                                if (value == null || value.isEmpty) return "Email required";
-                                if (!value.contains("@")) return "Invalid email";
+                                if (value == null || value.isEmpty) return 'Email required';
+                                if (!value.contains('@')) return 'Invalid email';
                                 return null;
                               },
                             ),
@@ -192,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             // PASSWORD FIELD
                             _buildTextField(
                               controller: _passwordController,
-                              label: "Password",
+                              label: 'Password',
                               icon: Icons.lock_outline_rounded,
                               isPassword: true,
                               isVisible: !_obscurePassword,
@@ -202,7 +202,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 });
                               },
                               validator: (value) => value == null || value.isEmpty
-                                  ? "Password required"
+                                  ? 'Password required'
                                   : null,
                             ),
 
@@ -219,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                 ),
                                 child: Text(
-                                  "Forgot Password?",
+                                  'Forgot Password?',
                                   style: TextStyle(
                                     color: Colors.green[700],
                                     fontWeight: FontWeight.w600,
@@ -285,7 +285,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                         ),
                                       )
                                     : const Text(
-                                        "Log In",
+                                        'Log In',
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold,
@@ -344,7 +344,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             Navigator.pushNamed(context, '/register');
                           },
                           child: const Text(
-                            "Sign Up",
+                            'Sign Up',
                             style: TextStyle(
                               color: Color(0xFF00A040),
                               fontWeight: FontWeight.bold,

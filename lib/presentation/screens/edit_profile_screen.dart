@@ -20,9 +20,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   void initState() {
     super.initState();
-    _nameController = TextEditingController(text: "Iman Putra");
-    _emailController = TextEditingController(text: "eco.habits@example.com");
-    _bioController = TextEditingController(text: "Eco enthusiast 🌱");
+    _nameController = TextEditingController(text: 'Iman Putra');
+    _emailController = TextEditingController(text: 'eco.habits@example.com');
+    _bioController = TextEditingController(text: 'Eco enthusiast 🌱');
   }
 
   @override
@@ -43,7 +43,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         });
       }
     } catch (e) {
-      debugPrint("Error picking image: $e");
+      debugPrint('Error picking image: $e');
     }
   }
 
@@ -61,7 +61,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
-              "Change Profile Photo",
+              'Change Profile Photo',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
@@ -71,7 +71,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               children: [
                 _buildSourceOption(
                   icon: Icons.camera_alt_rounded,
-                  label: "Camera",
+                  label: 'Camera',
                   onTap: () {
                     Navigator.pop(context);
                     _pickImage(ImageSource.camera);
@@ -79,7 +79,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 _buildSourceOption(
                   icon: Icons.photo_library_rounded,
-                  label: "Gallery",
+                  label: 'Gallery',
                   onTap: () {
                     Navigator.pop(context);
                     _pickImage(ImageSource.gallery);
@@ -97,7 +97,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 },
                 icon: const Icon(Icons.delete_outline, color: Colors.red),
                 label: const Text(
-                  "Remove Photo",
+                  'Remove Photo',
                   style: TextStyle(color: Colors.red),
                 ),
               ),
@@ -145,7 +145,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFE6F4E7),
       appBar: AppBar(
-        title: const Text("Edit Profile"),
+        title: const Text('Edit Profile'),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -193,7 +193,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       child: CircleAvatar(
                         radius: 20,
                         backgroundColor: Colors.green[700],
-                        child: Icon(
+                        child: const Icon(
                           Icons.camera_alt_rounded,
                           color: Colors.white,
                           size: 20,
@@ -208,14 +208,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             const SizedBox(height: 30),
 
             _buildTextField(
-              label: "Full Name",
+              label: 'Full Name',
               controller: _nameController,
               icon: Icons.person_outline_rounded,
             ),
             const SizedBox(height: 20),
 
             _buildTextField(
-              label: "Email Address",
+              label: 'Email Address',
               controller: _emailController,
               icon: Icons.email_outlined,
               keyboardType: TextInputType.emailAddress,
@@ -223,7 +223,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             const SizedBox(height: 20),
 
             _buildTextField(
-              label: "Bio / Status",
+              label: 'Bio / Status',
               controller: _bioController,
               icon: Icons.info_outline_rounded,
               maxLines: 2,
@@ -255,7 +255,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   shadowColor: Colors.green.withOpacity(0.4),
                 ),
                 child: const Text(
-                  "Save Changes",
+                  'Save Changes',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -304,7 +304,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 : Icon(icon, color: Colors.green[600]),
             filled: true,
             fillColor: Colors.white,
-            hintText: "Enter your $label",
+            hintText: 'Enter your $label',
             hintStyle: TextStyle(color: Colors.grey[400]),
             contentPadding: const EdgeInsets.symmetric(
               vertical: 16,

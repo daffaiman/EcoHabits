@@ -6,46 +6,46 @@ class TipsScreen extends StatelessWidget {
   // Data Dummy untuk Tips
   final List<Map<String, dynamic>> _tips = const [
     {
-      "title": "Matikan Lampu",
-      "desc":
-          "Matikan lampu saat meninggalkan ruangan untuk menghemat energi dan biaya listrik.",
-      "icon": Icons.lightbulb_outline_rounded,
-      "color": Colors.orange,
+      'title': 'Matikan Lampu',
+      'desc':
+          'Matikan lampu saat meninggalkan ruangan untuk menghemat energi dan biaya listrik.',
+      'icon': Icons.lightbulb_outline_rounded,
+      'color': Colors.orange,
     },
     {
-      "title": "Bawa Tas Belanja",
-      "desc":
-          "Kurangi penggunaan kantong plastik sekali pakai dengan membawa tote bag sendiri.",
-      "icon": Icons.shopping_bag_outlined,
-      "color": Colors.blue,
+      'title': 'Bawa Tas Belanja',
+      'desc':
+          'Kurangi penggunaan kantong plastik sekali pakai dengan membawa tote bag sendiri.',
+      'icon': Icons.shopping_bag_outlined,
+      'color': Colors.blue,
     },
     {
-      "title": "Hemat Air",
-      "desc":
-          "Jangan biarkan keran air menyala saat menyikat gigi atau mencuci piring.",
-      "icon": Icons.water_drop_outlined,
-      "color": Colors.cyan,
+      'title': 'Hemat Air',
+      'desc':
+          'Jangan biarkan keran air menyala saat menyikat gigi atau mencuci piring.',
+      'icon': Icons.water_drop_outlined,
+      'color': Colors.cyan,
     },
     {
-      "title": "Daur Ulang Sampah",
-      "desc":
-          "Pisahkan sampah organik dan anorganik agar mudah didaur ulang kembali.",
-      "icon": Icons.recycling_rounded,
-      "color": Colors.green,
+      'title': 'Daur Ulang Sampah',
+      'desc':
+          'Pisahkan sampah organik dan anorganik agar mudah didaur ulang kembali.',
+      'icon': Icons.recycling_rounded,
+      'color': Colors.green,
     },
     {
-      "title": "Gunakan Transportasi Umum",
-      "desc":
-          "Kurangi jejak karbon kendaraan pribadi dengan menggunakan bus atau kereta.",
-      "icon": Icons.directions_bus_outlined,
-      "color": Colors.red,
+      'title': 'Gunakan Transportasi Umum',
+      'desc':
+          'Kurangi jejak karbon kendaraan pribadi dengan menggunakan bus atau kereta.',
+      'icon': Icons.directions_bus_outlined,
+      'color': Colors.red,
     },
     {
-      "title": "Tanam Pohon",
-      "desc":
-          "Menanam satu pohon di halaman rumah dapat membantu menyerap CO2.",
-      "icon": Icons.park_outlined,
-      "color": Colors.teal,
+      'title': 'Tanam Pohon',
+      'desc':
+          'Menanam satu pohon di halaman rumah dapat membantu menyerap CO2.',
+      'icon': Icons.park_outlined,
+      'color': Colors.teal,
     },
   ];
 
@@ -55,7 +55,7 @@ class TipsScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF5F9F6), // Background hijau pastel muda
       appBar: AppBar(
         title: const Text(
-          "Eco Tips",
+          'Eco Tips',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,

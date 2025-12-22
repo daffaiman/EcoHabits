@@ -32,13 +32,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text("Log Out"),
-        content: const Text("Are you sure you want to log out?"),
+        title: const Text('Log Out'),
+        content: const Text('Are you sure you want to log out?'),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: const Text("Cancel", style: TextStyle(color: Colors.grey)),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -62,7 +62,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
-            child: const Text("Log Out"),
+            child: const Text('Log Out'),
           ),
         ],
       ),
@@ -76,13 +76,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final user = auth.user; 
     
     // Tampilan default jika data loading/null
-    final String displayName = user?.displayName ?? "User";
-    final String displayEmail = user?.email ?? "email@example.com";
+    final String displayName = user?.displayName ?? 'User';
+    final String displayEmail = user?.email ?? 'email@example.com';
 
     return Scaffold(
       backgroundColor: const Color(0xFFE6F4E7),
       appBar: AppBar(
-        title: const Text("My Profile"),
+        title: const Text('My Profile'),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -163,14 +163,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   _buildProfileMenuItem(
                     icon: Icons.person_outline_rounded,
-                    title: "Edit Personal Details",
+                    title: 'Edit Personal Details',
                     onTap: _navigateToEditProfile,
                   ),
                   const Divider(height: 1, indent: 20, endIndent: 20),
 
                   _buildProfileMenuItem(
                     icon: Icons.lock_outline_rounded,
-                    title: "Change Password",
+                    title: 'Change Password',
                     onTap: () {
                       Navigator.pushNamed(context, '/change-password');
                     },
@@ -179,7 +179,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   _buildProfileMenuItem(
                     icon: Icons.notifications_outlined,
-                    title: "Notifications",
+                    title: 'Notifications',
                     onTap: () {
                       setState(() {
                         _notificationsEnabled = !_notificationsEnabled;
@@ -218,7 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   _buildProfileMenuItem(
                     icon: Icons.help_outline_rounded,
-                    title: "Help & Support",
+                    title: 'Help & Support',
                     onTap: () {
                       Navigator.pushNamed(context, '/help-support');
                     },
@@ -228,7 +228,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   _buildProfileMenuItem(
                     icon: Icons.logout_rounded,
-                    title: "Log Out",
+                    title: 'Log Out',
                     textColor: Colors.red,
                     iconColor: Colors.red,
                     onTap: () {
