@@ -1,0 +1,37 @@
+name: EcoHabits CI
+
+# Trigger: Jalan setiap kali ada push ke branch main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Ambil kode dari repository
+    - uses: actions/checkout@v3
+
+    # 2. Siapkan Flutter environment
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.10.0' # Sesuaikan dengan environment sdk di pubspec.yaml Anda
+        channel: 'stable'
+
+    # 3. Install dependencies
+    - name: Install Dependencies
+      run: flutter pub get
+
+    # 4. Jalankan Static Code Analysis (TM 13 & 14)
+    # Ini akan gagal jika ada error/warning di kode Anda
+    - name: Run Static Analysis
+      run: flutter analyze
+
+    # 5. Jalankan Unit Test (Jika ada)
+    # Kita skip integration test di sini karena butuh emulator
+    - name: Run Unit Tests
+      run: flutter test
