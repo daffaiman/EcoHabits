@@ -1,16 +1,31 @@
-# flutter_application_2
+# EcoHabits 🌱
 
-A new Flutter project.
+EcoHabits adalah aplikasi pelacak kebiasaan ramah lingkungan yang dibangun menggunakan Flutter. Proyek ini dikembangkan dengan fokus utama pada **Quality Assurance**, **Testing**, dan **Clean Code Architecture**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📊 Status Pengujian & Kualitas Kode
 
-A few resources to get you started if this is your first Flutter project:
+Proyek ini telah memenuhi standar pengujian sistem sebagai berikut:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Kriteria | Status | Tools / Metode |
+| :--- | :--- | :--- |
+| **Unit Testing** | ✅ **Passed** | `flutter test` (TDD) |
+| **Static Code Analysis** | ✅ **Clean** | Flutter Lints (`analysis_options.yaml`) |
+| **Code Coverage** | 📈 **> 80%** | LCOV Report |
+| **CI/CD Pipeline** | ✅ **Active** | GitHub Actions |
+| **Security** | 🛡️ **Grade A** | SonarQube Analysis |
+| **Reliability** | 💎 **Grade A** | SonarQube Analysis |
+| **Maintainability** | 🛠️ **Grade A** | SonarQube Analysis |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Fitur Pengujian (Testing Strategy)
+
+### 1. Unit Testing (TDD)
+Kami menerapkan **Test-Driven Development (TDD)** untuk memastikan logika bisnis valid sebelum kode implementasi ditulis.
+- **Lokasi Test:** `test/validator_test.dart`
+- **Lokasi Logic:** `lib/utils/validator.dart`
+- **Cara Jalankan:**
+  ```bash
+  flutter test
