@@ -1,3 +1,8 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=daffaiman_EcoHabits&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=daffaiman_EcoHabits)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=daffaiman_EcoHabits&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=daffaiman_EcoHabits)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=daffaiman_EcoHabits&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=daffaiman_EcoHabits)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=daffaiman_EcoHabits&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=daffaiman_EcoHabits)
+
 # EcoHabits 🌱
 
 EcoHabits adalah aplikasi pelacak kebiasaan ramah lingkungan yang dibangun menggunakan Flutter. Proyek ini dikembangkan dengan fokus utama pada **Quality Assurance**, **Testing**, dan **Clean Code Architecture**.
