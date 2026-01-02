@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "daffaiman",
+        "projectKey": "daffaiman_EcoHabits"
+    }
+}
